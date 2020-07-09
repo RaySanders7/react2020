@@ -1,12 +1,12 @@
 import React from 'react';
 import TableHeader from './TableHeader';
-import TableData from './TableData';
+import TableDataItem from './TableDataItem';
 
 // TODO: State Lives Here
 const EmployeeData = () => (
   <div className="data">
     <TableHeader />
-    <TableData />
+    <TableDataItem />
   </div>
 );
 

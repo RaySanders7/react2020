@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableData = () => (
+const TableDataItem = () => (
   <div className="table-data">
     <div className='employee-id'>1</div>
     <div className='first-name'>Chuck</div>
@@ -14,4 +14,4 @@ const TableData = () => (
   </div>
 );
 
-export default TableData;
+export default TableDataItem;
