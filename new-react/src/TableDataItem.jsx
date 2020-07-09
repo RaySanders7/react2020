@@ -1,16 +1,16 @@
 import React from 'react';
 
-const TableDataItem = () => (
+const TableDataItem = ({ data }) => (
   <div className="table-data">
-    <div className='employee-id'>1</div>
-    <div className='first-name'>Chuck</div>
-    <div className='last-name'>Daubeny</div>
-    <div className='email'>cdaubeny0@vistaprint.com</div>
-    <div className='gender'>Male</div>
-    <div className='race'>Prefer Not to Answer</div>
-    <div className='age'>7/19/1984</div>
-    <div className='job-title'>Senior Editor</div>
-    <div className='department'>Marketing</div>
+    <div className='employee-id'>{data.employeeId}</div>
+    <div className='first-name'>{data.firstName}</div>
+    <div className='last-name'>{data.lastName}</div>
+    <div className='email'>{data.email}</div>
+    <div className='gender'>{data.gender}</div>
+    <div className='race'>{data.race}</div>
+    <div className='age'>{data.age}</div>
+    <div className='job-title'>{data.jobTitle}</div>
+    <div className='department'>{data.department}</div>
   </div>
 );
 
