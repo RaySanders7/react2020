@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TableHeader from './TableHeader';
 import TableDataItem from './TableDataItem';
 import SearchBar from './SearchBar';
+import { useEffect } from 'react';
+import tempData from './data/tempData.json'
 
-// TODO: State Lives Here
-const EmployeeData = () => (
-  <div className="data">
-    <SearchBar />
-    <TableHeader />
-    <TableDataItem />
-  </div>
-);
+const EmployeeData = () => {
+  const [employeeData, setEmployeeData] = useState([]);
+
+  useEffect(() => {
+    setEmployeeData(tempData);
+  }, []);
+
+  return (
+    <div className="data">
+      <SearchBar />
+      <TableHeader />
+      {
+        employeeData.map(e => <TableDataItem key={e.employeeId} data={e} />)
+      }
+    </div>
+)};
 
 export default EmployeeData;
