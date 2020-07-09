@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,3 +25,55 @@
     transform: rotate(360deg);
   }
 }
+
+.data .table-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.data .table-data {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-data .column {
+  flex: auto;
+}
+
+.employee-id {
+  flex: 1;
+  align-content: start;
+}
+
+.first-name {
+  flex: 2;
+}
+
+.last-name {
+  flex: 2;
+}
+
+.email {
+  flex: 3;
+}
+
+.gender {
+  flex: 2;
+}
+
+.race {
+  flex: 2;
+}
+
+.age {
+  flex: 2;
+}
+
+.job-title {
+  flex: 3;
+}
+
+.department {
+  flex: 3;
+}
+
