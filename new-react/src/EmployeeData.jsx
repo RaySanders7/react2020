@@ -10,10 +10,15 @@ const EmployeeData = () => {
   const [filterText, setFilterText] = useState('');
 
   useEffect(() => {
-    setEmployeeData(tempData);
-  }, []);
+    const results = tempData.filter(td =>
+      td.firstName.toLowerCase().includes(filterText)
+    );
+    setEmployeeData(results);
+  }, [filterText]);
 
-  const onFilterTextChange = text => setFilterText(text);
+  const onFilterTextChange = text => {
+    setFilterText(text);
+  }
 
   return (
     <div className="data">
