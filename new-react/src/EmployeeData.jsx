@@ -37,7 +37,7 @@ const EmployeeData = () => {
               employeeData.map(e => <TableDataItem key={e.employeeId} data={e} />)
             }
           </>
-        ) : <NoResults />
+        ) : <NoResults filterText={filterText} />
       }
     </div>
 )};
