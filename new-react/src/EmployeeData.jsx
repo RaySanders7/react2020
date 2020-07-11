@@ -4,6 +4,7 @@ import TableDataItem from './TableDataItem';
 import SearchBar from './SearchBar';
 import { useEffect } from 'react';
 import tempData from './data/tempData.json'
+import NoResults from './NoResults';
 
 const EmployeeData = () => {
   const [employeeData, setEmployeeData] = useState([]);
@@ -28,9 +29,15 @@ const EmployeeData = () => {
   return (
     <div className="data">
       <SearchBar filterText={filterText} onFilterTextChange={onFilterTextChange} />
-      <TableHeader />
       {
-        employeeData.map(e => <TableDataItem key={e.employeeId} data={e} />)
+        employeeData.length > 0 ? (
+          <>
+            <TableHeader />
+            {
+              employeeData.map(e => <TableDataItem key={e.employeeId} data={e} />)
+            }
+          </>
+        ) : <NoResults />
       }
     </div>
 )};
