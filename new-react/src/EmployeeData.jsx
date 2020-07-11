@@ -8,10 +8,15 @@ import tempData from './data/tempData.json'
 const EmployeeData = () => {
   const [employeeData, setEmployeeData] = useState([]);
   const [filterText, setFilterText] = useState('');
-
+  
+  const containsFilterText = (data, filterText) => {
+    return data.firstName.toLowerCase().includes(filterText)
+    || data.lastName.toLowerCase().includes(filterText)
+    || data.email.toLowerCase().includes(filterText);
+  }
   useEffect(() => {
     const results = tempData.filter(td =>
-      td.firstName.toLowerCase().includes(filterText)
+      containsFilterText(td, filterText)
     );
     setEmployeeData(results);
   }, [filterText]);
